@@ -3,7 +3,7 @@ package com.revature.project0;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
-import java.io.IOException;
+import java.util.Scanner;
 
 public class Project0App {
     public static void main(String[] args) {
@@ -23,7 +23,60 @@ public class Project0App {
             System.err.println("Could not establish a connection");
 
         }
+        prompt();
+    }
 
+    public static void prompt() {
+        System.out.println("What would you like to do? (Type number) \n 1. Paycheck \n 2. Bills \n 3. Daily Allowance");
+
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+
+        switch (input) {
+            case 1:
+                System.out.println("Chose Paycheck");
+                // Run method that queries paycheck and throws a new prompt.
+                break;
+            case 2:
+                System.out.println("Chose Bills");
+                // Run method that queries all bills and throws a new prompt.
+                billsPrompt();
+                break;
+            case 3:
+                System.out.println("Chose Daily Allowance");
+                // Run method that queries allowance and throws a new prompt
+                break;
+            default:
+                System.out.println("Invalid");
+                // Start prompt over
+
+        }
+    }
+
+    public static void billsPrompt() {
+        System.out.println("1. Add \n2. Delete \n3. Back");
+
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+
+        switch(input) {
+            case 1:
+                System.out.println("Chose Add");
+                //Run Query method that adds bill
+                break;
+            case 2:
+                System.out.println("Chose Edit");
+                //Run Query method that edits bill
+                break;
+            case 3:
+                prompt();
+                break;
+            default:
+                System.out.println("Invalid entry");
+
+        }
+
+        sc.close();
     }
 
 }
