@@ -25,7 +25,6 @@ public class Project0App {
         }
         prompt();
     }
-
     public static void prompt() {
         System.out.println("What would you like to do? (Type number) \n 1. Paycheck \n 2. Bills \n 3. Daily Allowance");
 
@@ -52,7 +51,6 @@ public class Project0App {
                 // Start prompt over
         }
     }
-
     public static void paycheckPrompt() {
         System.out.println("1. Edit \n2. Back");
 
@@ -72,7 +70,6 @@ public class Project0App {
                 // Start prompt over
         }
     }
-
     public static void billsPrompt() {
         System.out.println("1. Add \n2. Delete \n3. Back");
 
@@ -95,7 +92,6 @@ public class Project0App {
                 System.out.println("Invalid entry");
         }
     }
-
     public static void allowancePrompt() {
         System.out.println("1. Back");
 
@@ -105,7 +101,7 @@ public class Project0App {
         switch (input) {
             case 1:
                 prompt();
-                // Run method that queries paycheck and throws a new prompt.
+                // Run method that queries allowance and prints it
                 break;
             default:
                 System.out.println("Invalid");
