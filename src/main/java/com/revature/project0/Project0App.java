@@ -36,6 +36,7 @@ public class Project0App {
             case 1:
                 System.out.println("Chose Paycheck");
                 // Run method that queries paycheck and throws a new prompt.
+                paycheckPrompt();
                 break;
             case 2:
                 System.out.println("Chose Bills");
@@ -49,7 +50,26 @@ public class Project0App {
             default:
                 System.out.println("Invalid");
                 // Start prompt over
+        }
+    }
 
+    public static void paycheckPrompt() {
+        System.out.println("1. Edit \n2. Back");
+
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+
+        switch (input) {
+            case 1:
+                System.out.println("Chose Edit Paycheck");
+                // Run method that queries paycheck and throws a new prompt.
+                break;
+            case 2:
+                prompt();
+                break;
+            default:
+                System.out.println("Invalid");
+                // Start prompt over
         }
     }
 
@@ -73,12 +93,25 @@ public class Project0App {
                 break;
             default:
                 System.out.println("Invalid entry");
-
         }
-
-        sc.close();
     }
 
+    public static void allowancePrompt() {
+        System.out.println("1. Back");
+
+        Scanner sc = new Scanner(System.in);
+        int input = sc.nextInt();
+
+        switch (input) {
+            case 1:
+                prompt();
+                // Run method that queries paycheck and throws a new prompt.
+                break;
+            default:
+                System.out.println("Invalid");
+                // Start prompt over
+        }
+    }
 }
 
 //
