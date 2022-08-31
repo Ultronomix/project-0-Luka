@@ -6,13 +6,13 @@ import com.revature.project0.users.UserDAO;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class RegisterScreen extends AbstractScreen {
+public class PaycheckScreen extends AbstractScreen {
 
     private final String RED_TEXT = "\u001B[31m";
     private final String RESET_TEXT = "\u001B[0m";
 
-    public RegisterScreen(BufferedReader consoleReader) {
-        super("RegisterScreen", consoleReader);
+    public PaycheckScreen(BufferedReader consoleReader) {
+        super("PaycheckScreen", consoleReader);
     }
 
     @Override

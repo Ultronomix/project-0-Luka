@@ -16,12 +16,7 @@ public class WelcomeScreen extends AbstractScreen {
 
         System.out.println("+--------------------------------------------------------+");
 
-        String welcomeMenu = "Welcome to Taskmaster!\n" +
-                             "Please make a selection from the options below:\n" +
-                             "1) Register\n" +
-                             "2) Login\n" +
-                             "3) Exit\n" +
-                             "> ";
+        String welcomeMenu = "What would you like to do? (Type number) \n 1. Paycheck \n 2. Bills \n 3. Daily Allowance";
 
         System.out.print(welcomeMenu);
 
@@ -29,10 +24,10 @@ public class WelcomeScreen extends AbstractScreen {
 
         switch (userSelection) {
             case "1":
-                new RegisterScreen(consoleReader).render();
+                new PaycheckScreen(consoleReader).render();
                 break;
             case "2":
-                new LoginScreen(consoleReader).render();
+                new BillsScreen(consoleReader).render();
                 break;
             case "3":
                 System.out.println("Exiting the application!");

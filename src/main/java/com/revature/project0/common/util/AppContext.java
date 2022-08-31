@@ -1,7 +1,9 @@
 package com.revature.project0.common.util;
 
-import com.revature.taskmaster.common.screens.Screen;
-import com.revature.taskmaster.common.screens.WelcomeScreen;
+import com.revature.project0.common.screens.Screen;
+import com.revature.project0.common.screens.WelcomeScreen;
+import com.revature.project0.common.screens.Screen;
+import com.revature.project0.common.screens.WelcomeScreen;
 
 import java.io.BufferedReader;
 import java.io.IOException;
