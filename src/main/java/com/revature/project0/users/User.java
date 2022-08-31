@@ -5,14 +5,6 @@ import java.util.Objects;
 // POJO = Plain Ol' Java Objects
 public class User {
 
-    private String id;
-    private String givenName;
-    private String surname;
-    private String email;
-    private String username;
-    private String password;
-    private Role role;
-
     public String getId() {
         return id;
     }
@@ -21,78 +13,46 @@ public class User {
         this.id = id;
     }
 
-    public String getGivenName() {
-        return givenName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setGivenName(String givenName) {
-        this.givenName = givenName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getSurname() {
-        return surname;
+    public int getPaycheck() {
+        return paycheck;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setPaycheck(int paycheck) {
+        this.paycheck = paycheck;
     }
 
-    public String getEmail() {
-        return email;
-    }
+    private String id;
+ private String userName;
+ private int paycheck;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(givenName, user.givenName) && Objects.equals(surname, user.surname) && Objects.equals(email, user.email) && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(role, user.role);
+        return Objects.equals(id, user.id) && Objects.equals(userName, user.userName) && Objects.equals(paycheck, user.paycheck);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, givenName, surname, email, username, password, role);
+        return Objects.hash(id, userName, paycheck);
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id='" + id + '\'' +
-                ", givenName='" + givenName + '\'' +
-                ", surname='" + surname + '\'' +
-                ", email='" + email + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", role=" + role +
+                ", userName='" + userName + '\'' +
+                ", paycheck='" + paycheck +
                 '}';
     }
-
 }
