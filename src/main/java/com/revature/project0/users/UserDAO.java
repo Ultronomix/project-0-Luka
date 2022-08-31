@@ -1,6 +1,6 @@
 package com.revature.project0.users;
 
-import com.revature.taskmaster.common.datasource.ConnectionFactory;
+import com.revature.project0.common.datasource.ConnectionFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -27,12 +27,8 @@ public class UserDAO {
             while (rs.next()) {
                 User user = new User();
                 user.setId(rs.getString("id"));
-                user.setGivenName(rs.getString("given_name"));
-                user.setSurname(rs.getString("surname"));
-                user.setEmail(rs.getString("email"));
-                user.setUsername(rs.getString("username"));
-                user.setPassword("***********"); // done for security purposes
-                user.setRole(new Role(rs.getString("role_id"), rs.getString("role")));
+                user.setUserName(rs.getString("user_name"));
+                user.setPaycheck(rs.getInt("paycheck"));
                 allUsers.add(user);
             }
 
@@ -53,11 +49,9 @@ public class UserDAO {
         try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
 
             PreparedStatement pstmt = conn.prepareStatement(sql, new String[] {"id"});
-            pstmt.setString(1, user.getGivenName());
-            pstmt.setString(2, user.getSurname());
-            pstmt.setString(3, user.getEmail());
-            pstmt.setString(4, user.getUsername());
-            pstmt.setString(5, user.getPassword());
+            pstmt.setString(1, user.getId());
+            pstmt.setString(2, user.getUserName());
+            pstmt.setInt(3, user.getPaycheck());
 
             pstmt.executeUpdate();
 
