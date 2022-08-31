@@ -1,7 +1,5 @@
 package com.revature.project0.common.screens;
 
-import com.revature.taskmaster.common.util.AppContext;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -16,7 +14,12 @@ public class WelcomeScreen extends AbstractScreen {
 
         System.out.println("+--------------------------------------------------------+");
 
-        String welcomeMenu = "What would you like to do? (Type number) \n 1. Paycheck \n 2. Bills \n 3. Daily Allowance";
+        String welcomeMenu = "Welcome to BudgetMe!\n" +
+                "Please make a selection from the options below:\n" +
+                "1) Paycheck\n" +
+                "2) Bills\n" +
+                "3) Daily Allowance\n" +
+                "> ";
 
         System.out.print(welcomeMenu);
 
@@ -30,11 +33,9 @@ public class WelcomeScreen extends AbstractScreen {
                 new BillsScreen(consoleReader).render();
                 break;
             case "3":
-                System.out.println("Exiting the application!");
-                AppContext.shutdown();
+                new DailyAllowanceScreen(consoleReader).render();
                 break;
             default:
-                System.out.println("You have made an incorrect selection. Please try again.");
         }
     }
 
