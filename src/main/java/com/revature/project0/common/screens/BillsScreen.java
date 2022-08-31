@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 public class BillsScreen extends AbstractScreen {
 
     public BillsScreen(BufferedReader consoleReader) {
-        super("WelcomeScreen", consoleReader);
+        super("BillsScreen", consoleReader);
     }
 
     @Override
