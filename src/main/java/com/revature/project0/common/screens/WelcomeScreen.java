@@ -33,8 +33,7 @@ public class WelcomeScreen extends AbstractScreen {
                 new BillsScreen(consoleReader).render();
                 break;
             case "3":
-//                new DailyAllowanceScreen(consoleReader).render();
-                System.out.println("Case 3");
+                new DailyAllowanceScreen(consoleReader).render();
                 break;
             default:
         }

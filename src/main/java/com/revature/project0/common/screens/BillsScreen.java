@@ -15,7 +15,7 @@ public class BillsScreen extends AbstractScreen {
     @Override
     public void render() throws IOException {
 
-        System.out.println("+--------------------------------------------------------+");
+        System.out.println("BillsScreen Works!");
 
     }
 
